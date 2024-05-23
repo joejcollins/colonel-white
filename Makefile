@@ -4,3 +4,6 @@ help: # Show help for each of the makefile recipes.
 
 serve:  # run the web server.
 	php artisan serve
+
+test: # run the tests
+	php artisan test
