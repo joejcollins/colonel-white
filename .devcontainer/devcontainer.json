@@ -9,7 +9,15 @@
 	// "features": {},
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+    "customizations": {
+        "vscode": {
+            "settings": {},
+            "extensions": [
+				"eamodio.gitlens",
+				"streetsidesoftware.code-spell-checker"
+            ]
+        }
+    },
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
