@@ -23,7 +23,8 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
-		8080
+		8000,
+		9000
 	],
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/mongosh-homebrew:1": {},
