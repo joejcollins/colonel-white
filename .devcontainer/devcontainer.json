@@ -6,30 +6,29 @@
 	"image": "mcr.microsoft.com/devcontainers/php:1-8.2-bullseye",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/mongosh-homebrew:1": {},
+		"ghcr.io/devcontainers-contrib/features/starship:1": {}
+	},
 
 	// Configure tool-specific properties.
-    "customizations": {
-        "vscode": {
-            "settings": {},
-            "extensions": [
+    	"customizations": {
+	        "vscode": {
+	            "settings": {},
+	            "extensions": [
 				"bmewburn.vscode-intelephense-client",
 				"eamodio.gitlens",
 				"streetsidesoftware.code-spell-checker",
 				"xdebug.php-debug"
-            ]
-        }
-    },
+	           	 ]
+		}
+    	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
 		8000,
 		9000
-	],
-	"features": {
-		"ghcr.io/devcontainers-contrib/features/mongosh-homebrew:1": {},
-		"ghcr.io/devcontainers-contrib/features/starship:1": {}
-	}
+	]
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html"
