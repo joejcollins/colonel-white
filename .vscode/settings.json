@@ -1,4 +1,4 @@
 {
-"editor.minimap.enabled": false,
-"terminal.integrated.scrollback": 100000,
+    "editor.minimap.enabled": false,
+    "terminal.integrated.scrollback": 100000,
 }
