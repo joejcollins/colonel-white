@@ -1,6 +1,6 @@
 {
-	"image": "ghcr.io/jmuchovej/devcontainers/latex:2024",
-	"name": "LaTeX",
+	"name": "LaTeX on midgard",
+	"image": "ghcr.io/earthroverprogram/midgard:latest",
 	"customizations": {
 		"vscode": {
 			"extensions": [
