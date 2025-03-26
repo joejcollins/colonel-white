@@ -70,5 +70,6 @@
 				"latex-workshop.synctex.afterBuild.enabled": true
 			}
 		}
-	}
+	},
+	"postCreateCommand": ". ./.devcontainer/post-create.sh | tee /tmp/post-create-log.txt"
 }
