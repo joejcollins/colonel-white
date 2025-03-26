@@ -1,0 +1,55 @@
+[project]
+name = "helheim"
+version = "0.1.0"
+description = "The realm of the dead where those who die a dishonorable death are forced to remain."
+authors = [{ name = "Earth Rover Program" }]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+requires-python = ">=3.12"
+dependencies = [
+    "debugpy",
+    "ipykernel",
+    "ipympl",
+    "loguru",
+    "matplotlib",
+    "matplotlib",
+    "mkdocs",
+    "nbconvert",
+    "numpy",
+    "pre-commit",
+    "python-dotenv",
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "sourcery",
+    "tqdm",
+    "types-tqdm",
+]
+[project.urls]
+repository = "https://github.com/earthroverprogram/helheim"
+
+[tool.pytest.ini_options]
+log_cli = false
+addopts = "-q --disable-warnings --cache-clear"
+testpaths = ["./tests"]
+
+[tool.ruff]
+lint.select = ["F", "E", "W", "C90", "I", "PL", "D"]
+lint.ignore = ["D203", "D213"]
+lint.fixable = ["ALL"]
+line-length = 88
+
+[[tool.mypy.overrides]]
+module = ["helheim.*"]
+follow_untyped_imports = true
+
+[tool.pyright]
+exclude = ["**/__pycache__"]
+reportMissingImports = true
+reportMissingTypeStubs = false
+pythonVersion = "3.13"
+pythonPlatform = "Linux"
