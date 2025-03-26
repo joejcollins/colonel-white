@@ -70,6 +70,5 @@
 				"latex-workshop.synctex.afterBuild.enabled": true
 			}
 		}
-	},
-	"postStartCommand": "tlmgr install xetex"
+	}
 }
