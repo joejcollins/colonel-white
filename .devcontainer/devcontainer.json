@@ -1,26 +1,94 @@
 {
-	"name": "helheim",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+	"image": "ghcr.io/jmuchovej/devcontainers/latex:2024",
+	"name": "LaTeX",
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/starship:1": {}
 	},
+	// "workspaceFolder": "/workspace",
 	"customizations": {
 		"vscode": {
-			"settings": {
-				"python.defaultInterpreterPath": ".venv/bin/python",
-				"python.terminal.activateEnvironment": true
-			},
 			"extensions": [
-				"charliermarsh.ruff",
-				"ms-toolsai.jupyter",
-				"ms-python.python",
-				"ms-python.vscode-python-envs",
-				"sourcery.sourcery",
-				"tamasfe.even-better-toml"
-			]
+				// LaTeX Workshop, goes without saying.
+				"james-yu.latex-workshop",
+				// Colorful comments based ensuring character
+				"aaron-bond.better-comments",
+				// vim keybindings for VSCode
+				"vscodevim.vim",
+				// Useful extensions for dev experience
+				"shardulm94.trailing-spaces", // Highlights straight whitespace
+				"stkb.rewrap" // Enables word-wrap on comments
+			],
+			"settings": {
+				"files.eol": "\n",
+				"editor.formatOnSave": true,
+				"files.associations": {
+					"*.tex": "latex"
+				},
+				"latex-workshop.latex.autoClean.run": "onBuilt",
+				"latex-workshop.latex.clean.subfolder.enabled": true,
+				"latex-workshop.latex.recipes": [
+					{
+						"name": "xetex -> biber -> xetex* 2",
+						"tools": [
+							"xetex",
+							"biber",
+							"xetex",
+							"xetex",
+						]
+					},
+					{
+						"name": "latexmk",
+						"tools": [
+							"latexmk"
+						]
+					}
+				],
+				"latex-workshop.latex.tools": [
+					{
+						"name": "xetex",
+						"command": "latexmk",
+						"args": [
+							"--shell-escape",
+							"-synctex=1",
+							"-interaction=nonstopmode",
+							"-file-line-error",
+							"-xetex",
+							"%DOC%"
+						]
+					},
+					{
+						"name": "biber",
+						"command": "biber",
+						"args": [
+							"%DOCFILE%"
+						]
+					},
+					{
+						"name": "latexmk",
+						"command": "latexmk",
+						"args": [
+							"-synctex=1",
+							"-interaction=nonstopmode",
+							"-file-line-error",
+							"-pdf",
+							"-outdir=%OUTDIR%",
+							"%DOC%"
+						]
+					}
+				],
+				"latex-workshop.linting.chktex.enabled": true,
+				"latex-workshop.linting.chktex.exec.path": "/usr/local/bin/chktex",
+				"latex-workshop.latexindent.enabled": true,
+				"latex-workshop.latexindent.exec.path": "latexindent",
+				"latex-workshop.formatting.latexindent.args": [
+					"-c",
+					"%DIR%/",
+					"%TMPFILE%",
+					"-y=defaultIndent: '%INDENT%'"
+				],
+				"latex-workshop.synctex.afterBuild.enabled": true
+			}
 		}
 	},
-	"postCreateCommand": ". ./.devcontainer/post-create.sh | tee /tmp/post-create-log.txt"
+	"postStartCommand": "tlmgr install xetex"
 }
