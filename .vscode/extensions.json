@@ -1,11 +1,13 @@
 {
     "recommendations": [
-        "charliermarsh.ruff",
+        // LaTeX Workshop, goes without saying.
         "james-yu.latex-workshop",
-        "ms-toolsai.jupyter",
-        "ms-python.python",
-        "ms-python.vscode-python-envs",
-        "sourcery.sourcery",
-        "tamasfe.even-better-toml"
+        // Colorful comments based ensuring character
+        "aaron-bond.better-comments",
+        // vim keybindings for VSCode
+        "vscodevim.vim",
+        // Useful extensions for dev experience
+        "shardulm94.trailing-spaces", // Highlights straight whitespace
+        "stkb.rewrap" // Enables word-wrap on comments
     ]
 }
