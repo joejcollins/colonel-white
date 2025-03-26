@@ -42,8 +42,7 @@
     ],
     "latex-workshop.linting.chktex.enabled": true,
     "latex-workshop.linting.chktex.exec.path": "/usr/local/bin/chktex",
-    "latex-workshop.latexindent.enabled": true,
-    "latex-workshop.latexindent.exec.path": "latexindent",
+    "latex-workshop.formatting.latex": "latexindent",
     "latex-workshop.formatting.latexindent.args": [
         "-c",
         "%DIR%/",

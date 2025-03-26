@@ -1,5 +1,6 @@
 {
     "recommendations": [
+        "streetsidesoftware.code-spell-checker",
         // LaTeX Workshop, goes without saying.
         "james-yu.latex-workshop",
         // Colorful comments based ensuring character
