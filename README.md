@@ -1,3 +1,3 @@
-# midgard
+# LaTeX Writing Repo
 
-Midgard is the realm where humans reside and is closest to the world of the Norse sagas.
+Experimental LaTeX writing repo with Jupyter notebooks for generating images.
