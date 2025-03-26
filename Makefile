@@ -9,7 +9,7 @@ clean: # Remove the environment.
 
 lock:  # Create the lock file and requirements file.
 	rm -f requirements.txt
-	uv pip compile pyproject.toml --python .venv/bin/python --output-file=requirements.txt  requirements.in
+	uv pip compile pyproject.toml --python .venv/bin/python --output-file=requirements.txt
 
 .PHONY: help
 help: # Show help for each of the makefile recipes.

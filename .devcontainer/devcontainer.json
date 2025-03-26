@@ -4,16 +4,13 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"streetsidesoftware.code-spell-checker",
-				// LaTeX Workshop, goes without saying.
-				"james-yu.latex-workshop",
-				// Colorful comments based ensuring character
 				"aaron-bond.better-comments",
-				// vim keybindings for VSCode
-				"vscodevim.vim",
-				// Useful extensions for dev experience
-				"shardulm94.trailing-spaces", // Highlights straight whitespace
-				"stkb.rewrap" // Enables word-wrap on comments
+				"james-yu.latex-workshop",
+				"ms-toolsai.jupyter",
+				"ms-python.python",
+				"shardulm94.trailing-spaces",
+				"stkb.rewrap",
+				"streetsidesoftware.code-spell-checker",
 			],
 			"settings": {
 				"files.eol": "\n",

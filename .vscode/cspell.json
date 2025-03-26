@@ -5,12 +5,16 @@
         "debugpy",
         "devcontainers",
         "dotenv",
+        "earthroverprogram",
         "jmuchovej",
+        "latexmk",
         "mypy",
+        "pdflatex",
         "pycache",
         "pyright",
         "shardulm",
         "stkb",
+        "toolsai",
         "vscodevim"
     ]
 }
