@@ -1,10 +1,6 @@
 {
 	"image": "ghcr.io/jmuchovej/devcontainers/latex:2024",
 	"name": "LaTeX",
-	"features": {
-		"ghcr.io/devcontainers-contrib/features/starship:1": {}
-	},
-	// "workspaceFolder": "/workspace",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -26,43 +22,7 @@
 				},
 				"latex-workshop.latex.autoClean.run": "onBuilt",
 				"latex-workshop.latex.clean.subfolder.enabled": true,
-				"latex-workshop.latex.recipes": [
-					{
-						"name": "xetex -> biber -> xetex* 2",
-						"tools": [
-							"xetex",
-							"biber",
-							"xetex",
-							"xetex",
-						]
-					},
-					{
-						"name": "latexmk",
-						"tools": [
-							"latexmk"
-						]
-					}
-				],
 				"latex-workshop.latex.tools": [
-					{
-						"name": "xetex",
-						"command": "latexmk",
-						"args": [
-							"--shell-escape",
-							"-synctex=1",
-							"-interaction=nonstopmode",
-							"-file-line-error",
-							"-xetex",
-							"%DOC%"
-						]
-					},
-					{
-						"name": "biber",
-						"command": "biber",
-						"args": [
-							"%DOCFILE%"
-						]
-					},
 					{
 						"name": "latexmk",
 						"command": "latexmk",
@@ -73,7 +33,27 @@
 							"-pdf",
 							"-outdir=%OUTDIR%",
 							"%DOC%"
-						]
+						],
+						"env": {}
+					},
+					{
+						"name": "pdflatex",
+						"command": "pdflatex",
+						"args": [
+							"-synctex=1",
+							"-interaction=nonstopmode",
+							"-file-line-error",
+							"%DOC%"
+						],
+						"env": {}
+					},
+					{
+						"name": "bibtex",
+						"command": "bibtex",
+						"args": [
+							"%DOCFILE%"
+						],
+						"env": {}
 					}
 				],
 				"latex-workshop.linting.chktex.enabled": true,
