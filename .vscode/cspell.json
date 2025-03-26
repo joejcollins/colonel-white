@@ -6,6 +6,9 @@
         "dotenv",
         "mypy",
         "pycache",
-        "pyright"
+        "pyright",
+        "shardulm",
+        "stkb",
+        "vscodevim"
     ]
 }
