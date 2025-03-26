@@ -10,7 +10,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from loguru import logger
 
-from helheim.helpers import file_finder_service
+from midgard.helpers import file_finder_service
 
 # Load environment variables from .env file if it exists
 load_dotenv()

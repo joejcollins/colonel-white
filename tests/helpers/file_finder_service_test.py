@@ -1,6 +1,6 @@
 """File finder service, to find the project root."""
 
-from helheim.helpers import file_finder_service
+from midgard.helpers import file_finder_service
 
 
 def test_find_file_upwards_might_not_be_found() -> None:
