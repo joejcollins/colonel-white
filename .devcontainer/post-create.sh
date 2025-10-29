@@ -1,9 +1,11 @@
-# Create the virtual environment.
-make venv
-make activate
+#!/bin/sh
 
-# Run pre-commit
-.venv/bin/pre-commit run
+# This script is run after the container is created.
+make clean
+make venv
+
+# Install pre-commit hooks
+.venv/bin/pre-commit install
 
 # Install Rust using rustup so we can have tex-fmt.
 # Once Debian trixie is available tex-fmt can be installed as a package.

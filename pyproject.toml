@@ -1,13 +1,17 @@
 [project]
-name = "midgard"
+name = "colonel-white"
 version = "0.0.1"
 description = "LaTeX report writing."
 readme = "README.md"
+requires-python = ">=3.13"
+authors = [{ name = "Joe J Collins", email = "joejcollins@gmail.com" }]
 classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.13",
 ]
-requires-python = ">=3.12"
+
 dependencies = [
     "debugpy",
     "ipykernel",
@@ -20,12 +24,8 @@ dependencies = [
     "ruff",
 ]
 [project.urls]
-repository = "https://github.com/earthroverprogram/midgard"
+repository = "https://github.com/joejcollins/colonel-white"
 
-[tool.pytest.ini_options]
-log_cli = false
-addopts = ["-q", "--disable-warnings", "--cache-clear"]
-testpaths = ["./tests"]
 
 [tool.ruff]
 lint.select = ["F", "E", "W", "C90", "I", "PL", "D"]
@@ -33,8 +33,11 @@ lint.ignore = ["D203", "D213"]
 lint.fixable = ["ALL"]
 line-length = 88
 
+[tool.uv]
+package = true
+
 [[tool.mypy.overrides]]
-module = ["midgard.*"]
+module = ["colonel_white.*"]
 follow_untyped_imports = true
 
 [tool.pyright]
@@ -43,3 +46,19 @@ reportMissingImports = true
 reportMissingTypeStubs = false
 pythonVersion = "3.13"
 pythonPlatform = "Linux"
+
+[tool.mypy]
+python_version = "3.13"
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.black]
+line-length = 88
+target-version = ["py313"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.pylint.master]
+py-version = "3.13"

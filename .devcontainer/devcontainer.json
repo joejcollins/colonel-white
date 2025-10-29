@@ -1,6 +1,6 @@
 {
-	"name": "LaTeX on midgard",
-	"image": "ghcr.io/earthroverprogram/midgard:latest",
+	"name": "LaTeX on colonel-white",
+	"image": "ghcr.io/joejcollins/colonel-white:latest",
 	"customizations": {
 		"vscode": {
 			"extensions": [
