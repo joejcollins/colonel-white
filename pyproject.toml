@@ -17,12 +17,11 @@ dependencies = [
     "ipykernel",
     "ipympl",
     "matplotlib",
-    "matplotlib",
     "nbconvert",
     "numpy",
-    "pytest",
     "ruff",
 ]
+
 [project.urls]
 repository = "https://github.com/joejcollins/colonel-white"
 
