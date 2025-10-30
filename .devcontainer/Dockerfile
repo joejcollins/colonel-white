@@ -1,5 +1,5 @@
-# Debian Trixie tex-fmt
-FROM debian:latest
+# Sourcery won't run on `arm` so force the use of `amd64` for the base image.
+FROM mcr.microsoft.com/devcontainers/base:bookworm
 
 # Install uv for everyone not just the current user.
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh \
