@@ -6,9 +6,9 @@ RUN curl -LsSf https://astral.sh/uv/install.sh | sh \
     && cp /root/.local/bin/uv /usr/local/bin/uv
 
 # Install LaTeX.
-RUN apt-get --quiet update \
-    && apt-get install --assume-yes texlive-latex-extra texlive-extra-utils latexmk \
-    && apt-get clean \
+RUN apt --quiet update \
+    && apt install --assume-yes texlive-latex-extra texlive-extra-utils latexmk tex-fmt just \
+    && apt clean \
     && rm -rf /var/lib/apt/lists/*
 
 # Add some labels so it looks nice in Github packages.
