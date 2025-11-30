@@ -3,13 +3,13 @@ name = "colonel-white"
 version = "0.0.1"
 description = "LaTeX report writing."
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 authors = [{ name = "Joe J Collins", email = "joejcollins@gmail.com" }]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
 ]
 
 dependencies = [
@@ -43,11 +43,11 @@ follow_untyped_imports = true
 exclude = ["**/__pycache__"]
 reportMissingImports = true
 reportMissingTypeStubs = false
-pythonVersion = "3.13"
+pythonVersion = "3.14"
 pythonPlatform = "Linux"
 
 [tool.mypy]
-python_version = "3.13"
+python_version = "3.14"
 warn_return_any = true
 warn_unused_configs = true
 
@@ -60,4 +60,4 @@ profile = "black"
 line_length = 88
 
 [tool.pylint.master]
-py-version = "3.13"
+py-version = "3.14"
