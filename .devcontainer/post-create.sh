@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # This script is run after the container is created.
-make clean
-make venv
+just clean
+just venv
 
 # Install pre-commit hooks
 .venv/bin/pre-commit install
