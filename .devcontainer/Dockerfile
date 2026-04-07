@@ -1,4 +1,5 @@
-# Sourcery won't run on `arm` so force the use of `amd64` for the base image.
+# Use the official Microsoft Dev Container base image for Debian Trixie.
+# Trixie includes tex-fmt which is convenient for LaTeX development.
 FROM mcr.microsoft.com/devcontainers/base:trixie
 
 # Install uv for everyone not just the current user.
