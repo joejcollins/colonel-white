@@ -44,5 +44,5 @@
     "latex-workshop.linting.chktex.enabled": true,
     "latex-workshop.linting.chktex.exec.path": "/usr/local/bin/chktex",
     "latex-workshop.formatting.latex": "tex-fmt",
-    "latex-workshop.synctex.afterBuild.enabled": true
+    "latex-workshop.synctex.afterBuild.enabled": false
 }
