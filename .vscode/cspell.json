@@ -2,11 +2,13 @@
     "version": "0.2",
     "language": "en",
     "words": [
+        "booktitle",
         "debugpy",
         "devcontainers",
         "dotenv",
         "earthroverprogram",
         "fontsize",
+        "inproceedings",
         "isort",
         "jmuchovej",
         "joejcollins",
